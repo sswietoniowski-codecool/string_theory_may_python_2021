@@ -1,6 +1,16 @@
 import string
 
 
+def get_letters(text):
+    letters = []
+    for character in text:
+        lowercase_character = character.lower()
+        if lowercase_character in string.ascii_lowercase:
+            letters.append(lowercase_character)
+
+    return letters
+
+
 def is_palindrome(text):
     """
     >>> is_palindrome('Mr. Owl ate my metal worm')
@@ -8,11 +18,7 @@ def is_palindrome(text):
     >>> is_palindrome('Eva, can I see bees in a cave?')
     True
     """
-    letters = []
-    for character in text:
-        lowercase_character = character.lower()
-        if lowercase_character in string.ascii_lowercase:
-            letters.append(lowercase_character)
+    letters = get_letters(text)
 
     return letters == letters[::-1]
 
