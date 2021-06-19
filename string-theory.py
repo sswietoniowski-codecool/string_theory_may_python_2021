@@ -38,7 +38,11 @@ def is_pangram(text):
     >>> is_pangram('The quick brown fox jumps over the lazy dog')
     True
     """
-    pass
+    letters = get_letters(text)
+    # string.ascii_lowercase
+    all_letters = set(string.ascii_lowercase)
+
+    return set(letters) == all_letters
 
 
 def is_anagram(text1, text2):
@@ -60,8 +64,10 @@ def is_blanagram(text1, text2):
 def main():
     # print(is_palindrome("Mr. Owl ate my metal worm"))
     # print(is_palindrome("XYZ"))
-    print(is_isogram('uncopyrightables'))
-    print(is_isogram('abba'))
+    # print(is_isogram('uncopyrightables'))
+    # print(is_isogram('abba'))
+    print(is_pangram("The quick brown fox jumps over the lazy dog"))
+    print(is_pangram("The quick brown the lazy dog"))
 
 
 if __name__ == "__main__":
