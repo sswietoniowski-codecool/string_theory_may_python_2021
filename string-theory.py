@@ -28,7 +28,9 @@ def is_isogram(text):
     >>> is_isogram('uncopyrightables')
     True
     """
-    pass
+    letters = get_letters(text)
+
+    return len(letters) == len(set(letters))
 
 
 def is_pangram(text):
@@ -56,8 +58,10 @@ def is_blanagram(text1, text2):
 
 
 def main():
-    print(is_palindrome("Mr. Owl ate my metal worm"))
-    print(is_palindrome("XYZ"))
+    # print(is_palindrome("Mr. Owl ate my metal worm"))
+    # print(is_palindrome("XYZ"))
+    print(is_isogram('uncopyrightables'))
+    print(is_isogram('abba'))
 
 
 if __name__ == "__main__":
