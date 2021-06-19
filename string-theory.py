@@ -50,7 +50,10 @@ def is_anagram(text1, text2):
     >>> is_anagram('Justin Timberlake', "I'm a jerk but listen")
     True
     """
-    pass
+    letters1 = get_letters(text1)
+    letters2 = get_letters(text2)
+
+    return sorted(letters1) == sorted(letters2)
 
 
 def is_blanagram(text1, text2):
@@ -66,8 +69,10 @@ def main():
     # print(is_palindrome("XYZ"))
     # print(is_isogram('uncopyrightables'))
     # print(is_isogram('abba'))
-    print(is_pangram("The quick brown fox jumps over the lazy dog"))
-    print(is_pangram("The quick brown the lazy dog"))
+    # print(is_pangram("The quick brown fox jumps over the lazy dog"))
+    # print(is_pangram("The quick brown the lazy dog"))
+    print(is_anagram("Justin Timberlake", "I'm a jerk but listen"))
+    print(is_anagram("abc", "def"))
 
 
 if __name__ == "__main__":
